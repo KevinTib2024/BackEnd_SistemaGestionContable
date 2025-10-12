@@ -12,5 +12,7 @@ namespace BackEnd_SistemaGestionContable.Model
         public bool IsDeleted { get; set; } = false;
 
         public List<Usuarios> usuarios { get; set; }
+        public List<Clientes> clientes { get; set; }
+        public List<Proveedores> proveedores { get; set; }
     }
 }

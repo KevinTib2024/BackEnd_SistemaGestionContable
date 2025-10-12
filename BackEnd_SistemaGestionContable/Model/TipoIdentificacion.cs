@@ -8,10 +8,10 @@ namespace BackEnd_SistemaGestionContable.Model
 
         public required string tipo_Identificacion { get; set; }
 
+        public List<Usuarios> usuarios { get; set; }
 
         [DefaultValue(false)]
         public bool IsDeleted { get; set; } = false;
 
-        public List<Usuarios> usuarios { get; set; }
     }
 }
