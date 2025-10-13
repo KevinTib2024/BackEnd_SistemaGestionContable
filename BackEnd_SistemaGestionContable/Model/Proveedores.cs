@@ -4,7 +4,7 @@ namespace BackEnd_SistemaGestionContable.Model
 {
     public class Proveedores
     {
-        public int ProveedoresriosId { get; set; }
+        public int ProveedoresId { get; set; }
 
         public virtual Ciudad ciudad { get; set; }
         public virtual required int Ciudad_Id { get; set; }

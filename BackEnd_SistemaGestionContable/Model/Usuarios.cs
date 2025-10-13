@@ -8,8 +8,8 @@ namespace BackEnd_SistemaGestionContable.Model
     {
         public int UsuariosId { get; set; }
 
-        public virtual TiposUsuario Tipos_Usuario { get; set; }
-        public virtual required int Tipo_Usuario_Id { get; set; }
+        public virtual TiposUsuario tipos_Usuario { get; set; }
+        public virtual required int tipo_Usuario_Id { get; set; }
 
 
         public virtual TipoIdentificacion tipoIdentificacion { get; set; }
