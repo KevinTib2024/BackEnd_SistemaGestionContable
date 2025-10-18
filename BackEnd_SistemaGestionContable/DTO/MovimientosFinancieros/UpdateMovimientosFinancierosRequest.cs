@@ -26,8 +26,8 @@
 
         public string? tipo_movimiento { get; set; }
         public string? descripcion { get; set; }
-        public float monto { get; set; }
-        public DateTime fecha_movimiento { get; set; }
+        public float? monto { get; set; }
+        public DateTime? fecha_movimiento { get; set; }
         public string? referencia { get; set; }
     }
 }

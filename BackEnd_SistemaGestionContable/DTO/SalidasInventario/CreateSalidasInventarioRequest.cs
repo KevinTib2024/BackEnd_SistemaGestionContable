@@ -16,7 +16,7 @@
         public int Productos_Id { get; set; }
 
         public DateTime fecha_salida { get; set; }
-        public string? motivo { get; set; }
+        public string motivo { get; set; }
         public float cantidad { get; set; }
     }
 }

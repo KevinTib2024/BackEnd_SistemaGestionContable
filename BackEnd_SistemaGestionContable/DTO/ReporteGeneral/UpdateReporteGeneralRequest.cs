@@ -19,7 +19,7 @@
         public int Usuarios_Id { get; set; }
 
         public string? tipo_reporte { get; set; }
-        public DateTime fecha_generacion { get; set; }
+        public DateTime? fecha_generacion { get; set; }
         public string? descripcion { get; set; }
         public string? archivo { get; set; }
     }

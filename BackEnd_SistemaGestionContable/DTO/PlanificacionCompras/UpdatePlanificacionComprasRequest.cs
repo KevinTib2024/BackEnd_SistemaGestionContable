@@ -19,9 +19,9 @@
         public int Usuarios_Id { get; set; }
         public int Productos_Id { get; set; }
 
-        public DateTime fecha_planificada { get; set; }
+        public DateTime? fecha_planificada { get; set; }
         public string? observaciones { get; set; }
-        public float cantidad { get; set; }
+        public float? cantidad { get; set; }
         public string? estado { get; set; }
     }
 }

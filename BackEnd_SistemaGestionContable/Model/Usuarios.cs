@@ -27,7 +27,7 @@ namespace BackEnd_SistemaGestionContable.Model
         public required DateTime fechaNacimiento { get; set; }
         public required string telefono { get; set; }
         public required DateTime fechaRegistro { get; set; }
-        public required bool acitivo { get; set; }
+        public required bool activo { get; set; }
 
         public required string correo { get; set; }
         public required string contraseña { get; set; }

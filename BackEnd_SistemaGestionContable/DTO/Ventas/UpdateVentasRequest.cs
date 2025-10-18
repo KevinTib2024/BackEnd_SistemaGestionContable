@@ -22,9 +22,9 @@
         public int Clientes_Id { get; set; }
         public int Mesas_Id { get; set; }
 
-        public DateTime fecha_venta { get; set; }
+        public DateTime? fecha_venta { get; set; }
         public string? metodo_pago { get; set; }
-        public float total { get; set; }
+        public float? total { get; set; }
         public string? estado { get; set; }
     }
 }

@@ -22,9 +22,9 @@
         public int Productos_Id { get; set; }
         public int Proveedores_Id { get; set; }
 
-        public float cantidad { get; set; }
-        public float precio_unitario { get; set; }
-        public DateTime fecha_entrada { get; set; }
+        public float? cantidad { get; set; }
+        public float? precio_unitario { get; set; }
+        public DateTime? fecha_entrada { get; set; }
         public string? motivo { get; set; }
         public string? referencia { get; set; }
     }

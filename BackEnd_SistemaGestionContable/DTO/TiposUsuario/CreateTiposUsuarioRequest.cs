@@ -6,6 +6,6 @@
     }
     public class CreateTiposUsuarioRequest
     {
-        public string? tiposUsuario { get; set; }
+        public string tiposUsuario { get; set; }
     }
 }

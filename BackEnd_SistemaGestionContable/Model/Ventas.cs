@@ -15,7 +15,7 @@ namespace BackEnd_SistemaGestionContable.Model
         public virtual Mesas mesas { get; set; }
         public virtual required int Mesas_Id { get; set; }
 
-        public required DateTime fecha_venta { get; set; }
+        public DateTime fecha_venta { get; set; }
         public required string metodo_pago { get; set; }
         public required float total { get; set; }
         public required string estado { get; set; }

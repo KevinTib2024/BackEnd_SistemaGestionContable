@@ -20,8 +20,8 @@
 
         public int Producto_Id { get; set; }
 
-        public int cantidad { get; set; }
-        public float precio_unitario { get; set; }
-        public float subtotal { get; set; }
+        public int? cantidad { get; set; }
+        public float? precio_unitario { get; set; }
+        public float? subtotal { get; set; }
     }
 }

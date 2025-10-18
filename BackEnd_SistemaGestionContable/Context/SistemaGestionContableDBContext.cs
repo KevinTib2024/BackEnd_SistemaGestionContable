@@ -113,5 +113,6 @@ namespace BackEnd_SistemaGestionContable.Context
         public DbSet<TiposUsuario> tiposUsuario { get; set; }
         public DbSet<Usuarios> usuarios { get; set; }
         public DbSet<Ventas> ventas { get; set; }
+        public DbSet<Clientes> clientes { get; set; }
     }
 }

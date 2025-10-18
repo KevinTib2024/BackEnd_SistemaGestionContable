@@ -7,6 +7,6 @@
 
     public class CreateTipoIdentificacionRequest
     {
-        public string? tipo_Identificacion { get; set; }
+        public string tipo_Identificacion { get; set; }
     }
 }

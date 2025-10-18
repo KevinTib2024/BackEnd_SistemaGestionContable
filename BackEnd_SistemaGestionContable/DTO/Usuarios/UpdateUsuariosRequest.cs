@@ -14,7 +14,7 @@
         DateTime? fechaNacimiento { get; set; }
         string? telefono { get; set; }
         DateTime? fechaRegistro { get; set; }
-        bool? acitivo { get; set; }
+        bool? activo { get; set; }
 
         string? correo { get; set; }
         string? contraseña { get; set; }
@@ -34,7 +34,7 @@
         public DateTime? fechaNacimiento { get; set; }
         public string? telefono { get; set; }
         public DateTime? fechaRegistro { get; set; }
-        public bool? acitivo { get; set; }
+        public bool? activo { get; set; }
 
         public string? correo { get; set; }
         public string? contraseña { get; set; }

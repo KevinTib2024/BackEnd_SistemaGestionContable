@@ -12,8 +12,8 @@
     {
         public int MesasId { get; set; }
 
-        public int numero_mesa { get; set; }
-        public int capacidad { get; set; }
-        public bool estado { get; set; }
+        public int? numero_mesa { get; set; }
+        public int? capacidad { get; set; }
+        public bool? estado { get; set; }
     }
 }
