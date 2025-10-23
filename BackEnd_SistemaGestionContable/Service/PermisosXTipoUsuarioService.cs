@@ -11,6 +11,7 @@ namespace BackEnd_SistemaGestionContable.Service
         Task CreatePermisosXTipoUsuarioAsync(CreatePermisosXTipoUsuarioRequest permisosXTipoUsuario);
         Task UpdatePermisosXTipoUsuarioAsync(UpdatePermisosXTipoUsuarioRequest permisosXTipoUsuario);
         Task SoftDeletePermisosXTipoUsuarioAsync(int id);
+        Task<bool> HasPermissionAsync(int userType_Id, int permissions_Id);
     }
 
     public class PermisosXTipoUsuarioService : IPermisosXTipoUsuarioService
@@ -30,6 +31,18 @@ namespace BackEnd_SistemaGestionContable.Service
         public async Task<IEnumerable<GetPermisosXTipoUsuarioRequest>> GetAllPermisosXTipoUsuarioAsync()
         {
             return await _permisosXTipoUsuarioRepository.GetAllPermisosXTipoUsuarioAsync();
+        }
+
+        public async Task<bool> HasPermissionAsync(int userType_Id, int permissions_Id)
+        {
+            try
+            {
+                return await _permisosXTipoUsuarioRepository.HasPermissionAsync(userType_Id, permissions_Id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public async Task<PermisosXTipoUsuario> GetPermisosXTipoUsuarioByIdAsync(int id)

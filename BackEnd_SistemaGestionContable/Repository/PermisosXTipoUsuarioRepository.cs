@@ -12,6 +12,7 @@ namespace BackEnd_SistemaGestionContable.Repository
         Task CreatePermisosXTipoUsuarioAsync(CreatePermisosXTipoUsuarioRequest permisosXTipoUsuario);
         Task UpdatepPermisosXTipoUsuarioAsync(UpdatePermisosXTipoUsuarioRequest permisosXTipoUsuario);
         Task SoftDeletePermisosXTipoUsuarioAsync(int id);
+        Task<bool> HasPermissionAsync(int userType_Id, int permissionsId);
     }
 
     public class PermisosXTipoUsuarioRepository : IPermisosXTipoUsuarioRepository
@@ -80,6 +81,15 @@ namespace BackEnd_SistemaGestionContable.Repository
                 permisos_Id = s.permisos_Id,
             })
             .FirstOrDefaultAsync();
+        }
+
+        public async Task<bool> HasPermissionAsync(int userType_Id, int permissionsId)
+        {
+            var permission = await _context.permisosXTipoUsuario
+            .Where(p => p.tipoUsuario_Id == userType_Id && p.permisos_Id == permissionsId && !p.IsDeleted)
+            .FirstOrDefaultAsync();
+
+            return permission != null ? true : false;
         }
 
         public async Task SoftDeletePermisosXTipoUsuarioAsync(int id)

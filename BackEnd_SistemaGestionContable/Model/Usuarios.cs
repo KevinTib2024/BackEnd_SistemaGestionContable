@@ -30,7 +30,7 @@ namespace BackEnd_SistemaGestionContable.Model
         public required bool activo { get; set; }
 
         public required string correo { get; set; }
-        public required string contraseña { get; set; }
+        public required string contrasena { get; set; }
 
         public List<ReporteGeneral> reporteGeneral { get; set; }
         public List<MovimientosFinancieros> movimientosFinancieros { get; set; }

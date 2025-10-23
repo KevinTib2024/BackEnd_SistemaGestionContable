@@ -68,9 +68,9 @@ namespace BackEnd_SistemaGestionContable.Repository
             // Convertir booleano
             bool activo = bool.TryParse(user.activo.ToString(), out bool activoResult) ? activoResult : false;
 
-            // Hashear la contraseña antes de guardarla en la base de datos
+            // Hashear la contrasena antes de guardarla en la base de datos
 
-            user.contraseña = _passwordHasher.HashPassword(null, user.contraseña);
+            user.contrasena = _passwordHasher.HashPassword(null, user.contrasena);
 
 
             var _newUser = new Usuarios
@@ -81,7 +81,7 @@ namespace BackEnd_SistemaGestionContable.Repository
                 genero_Id = user.genero_Id,
                 fechaNacimiento = user.fechaNacimiento.Value,
                 correo = user.correo,
-                contraseña = user.contraseña,
+                contrasena = user.contrasena,
                 tipo_Usuario_Id = user.tipo_Usuario_Id,
                 tipoIdentificacion_Id = user.tipoIdentificacion_Id,
                 telefono = user.telefono,
@@ -181,11 +181,11 @@ namespace BackEnd_SistemaGestionContable.Repository
             existingUser.correo = String.IsNullOrEmpty(user.correo) ? existingUser.correo : user.correo;
             existingUser.activo = user.activo ?? existingUser.activo;
 
-            // Verificar si la contraseña ha sido cambiada
-            if (!string.IsNullOrEmpty(user.contraseña))
+            // Verificar si la contrasena ha sido cambiada
+            if (!string.IsNullOrEmpty(user.contrasena))
             {
-                // Hashear la nueva contraseña
-                existingUser.contraseña = _passwordHasher.HashPassword(existingUser, user.contraseña);
+                // Hashear la nueva contrasena
+                existingUser.contrasena = _passwordHasher.HashPassword(existingUser, user.contrasena);
             }
 
             await _context.SaveChangesAsync();
@@ -198,8 +198,8 @@ namespace BackEnd_SistemaGestionContable.Repository
             if (user == null)
                 return false;
 
-            // Verificar la contraseña ingresada con la contraseña hasheada almacenada
-            var userVerification = _passwordHasher.VerifyHashedPassword(user, user.contraseña, password);
+            // Verificar la contrasena ingresada con la contrasena hasheada almacenada
+            var userVerification = _passwordHasher.VerifyHashedPassword(user, user.contrasena, password);
 
 
             return userVerification == PasswordVerificationResult.Success;

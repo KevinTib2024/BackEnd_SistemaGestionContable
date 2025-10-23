@@ -17,7 +17,7 @@
         bool? activo { get; set; }
 
         string? correo { get; set; }
-        string? contraseña { get; set; }
+        string? contrasena { get; set; }
     }
 
     public class GetUsuariosRequest
@@ -37,6 +37,6 @@
         public bool? activo { get; set; }
 
         public string? correo { get; set; }
-        public string? contraseña { get; set; }
+        public string? contrasena { get; set; }
     }
 }
